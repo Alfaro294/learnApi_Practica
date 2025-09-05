@@ -40,7 +40,8 @@ public class AuthController {
     }
 
     private void addTokenCookie(HttpServletResponse response, String correo) {
-        // Obtener el usuario completo de la base de datos
+
+        //Obtiene los datos completos del usuario
         Optional<UserEntity> userOpt = service.obtenerUsuario(correo);
 
         if (userOpt.isPresent()) {
